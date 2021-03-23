@@ -87,7 +87,7 @@ public class AnimController {
         return ResponseEntity.ok(optionalAnim.get());
     }
 
-    @GetMapping("/library/{libraryId}")
+    @GetMapping("/book/{bookId}")
     public ResponseEntity<Page<Anim>> getByBookId(@PathVariable Integer bookId, Pageable pageable) {
         return ResponseEntity.ok(animRepository.findByBookId(bookId, pageable));
     }
